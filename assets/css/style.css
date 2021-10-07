@@ -1,9 +1,33 @@
 * {
-    
+   
 }
 
 :root {
-    --primary: #44e9ff;
-    --secondary: #497980;
-    --tertiary: rgb(192, 246, 253);
+    --primary: #ddff44;
+    --secondary: #8f5c5e;
+    --tertiary: rgb(233, 193, 169);
 }
+
+/* Start of header styling */
+
+header {
+    background-color: var(--secondary) ;
+    background-size: cover;
+    border-bottom: 5px solid var(--primary);
+}
+
+h1 {
+    padding: 5px 5px solid var(--tertiary);
+    border-bottom: 3px solid var(--primary);
+}
+
+header nav ul li {
+    border-bottom: 1px solid var(--primary);
+    display: flex;
+    align-content: center;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    /* align-items: flex-end; */
+}
+
+/* Start of  */
