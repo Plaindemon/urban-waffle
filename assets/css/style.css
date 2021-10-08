@@ -1,24 +1,46 @@
+@font-face {
+    font-family: "WebPokeFont";
+    src: url("/urban-waffle/fonts/Pokemon-Hollow.ttf") format("ttf");
+}
+
+
 * {
-   
+    /* font-family: 'Times New Roman */
+    font-family: 'Work Sans';
 }
 
 :root {
     --primary: #ddff44;
     --secondary: #8f5c5e;
     --tertiary: rgb(233, 193, 169);
+    --quaternary: #600484;
 }
 
 /* Start of header styling */
 
 header {
-    background-color: var(--secondary) ;
+    font-family: 'WebPokeFont';
+    background-image: url("assets/images/poke-logo.png");
+    background-color: var(--secondary);
     background-size: cover;
-    border-bottom: 5px solid var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+
 }
 
-h1 {
-    padding: 5px 5px solid var(--tertiary);
-    border-bottom: 3px solid var(--primary);
+header img {
+    border-bottom: 5px solid blueviolet;
+    border-top: 5px solid blueviolet;
+    border-right: 5px solid rgb(34, 3, 63);
+    border-left: 5px solid rgb(42, 6, 75);
+}
+
+body header h1 {
+    border-bottom: 5px solid blueviolet;
+    border-top: 5px solid blueviolet;
+    border-right: 5px solid rgb(34, 3, 63);
+    border-left: 5px solid rgb(42, 6, 75);
+    /* align-content: center; */
 }
 
 header nav ul li {
@@ -30,4 +52,64 @@ header nav ul li {
     /* align-items: flex-end; */
 }
 
-/* Start of  */
+/* Beginning of instruct classes for table of instructions */
+#quizInstruct{
+    padding: 5px 5px solid var(--tertiary);
+    display: flex;
+    align-items: flex-end;
+}
+.instructNum {
+    background-color: var(--secondary) ;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    
+}
+.instructText{
+    background-color: var(--secondary) ;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    
+}
+
+/* #submitBtn {
+    
+} */
+
+/* End of instruct classes for table of instructions */
+
+
+/* Start of quizQuestion */
+#quizQuestion{
+    background-color: var(--tertiary);
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+
+}
+
+.quizQChoice{
+    background-color: var(--primary);
+    border: 2px solid var(--tertiary);
+    border-radius: 5px;
+}
+/* end of quizQuestion */
+
+/* Start of quiz-head */
+
+#quiz-footer{
+    background-color: var(--tertiary);
+    
+}
+
+.clickbtn {
+    background-color: var(--tertiary);
+    padding: 20px;
+    border: 1px solid var(--quaternary);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+/* End of quiz-head */
+

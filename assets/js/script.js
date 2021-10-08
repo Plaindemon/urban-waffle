@@ -1,8 +1,8 @@
-var counter = 10;
+var timer = 10;
 var countdown = function(){
-    console.log(counter);
-    counter--;
-    if(counter === 0){
+    console.log(timer);
+    timer--;
+    if(timer === 0){
         console.log("Quiz Time is up")
         clearInterval(startCountdown);
     };
@@ -10,4 +10,4 @@ var countdown = function(){
 
 
 
-var startCountdown = setInterval(countdown, 10000);
+var startCountdown = setInterval(countdown, 1000);
