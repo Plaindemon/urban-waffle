@@ -21,9 +21,9 @@
         <nav>
         
             <table>
-                <tr><button id="restartBtn" class="clickbtn">Restart</button></tr>
-                <tr><button id="saveBtn" class="clickbtn">Save</button></tr>
-                <tr><button id="nextBtn" class="clickbtn">Next</button></tr>
+                <!-- <tr><button id="restartBtn" class="clickbtn">Restart</button></tr> -->
+                <!-- <tr><button id="saveBtn" class="clickbtn">Save</button></tr> -->
+                <!-- <tr><button id="nextBtn" class="clickbtn">Next</button></tr> -->
                 <tr><button id="backBtn" class="clickbtn">Back</button></tr>
                 <tr><button id="startbtn" class="clickbtn">Start</button></tr>
                 <tr><button id="submitbtn" class="clickbtn">Submit</button></tr>
@@ -32,7 +32,7 @@
     
     
     <!-- Main starts here - fill with random question generated from a string of quiz questions -->
-    <main id="quizInstruct">
+    <div id="quizInstruct">
         <table>
             <!-- Created a table to place the instructions and their styling in -->
             <tr>
@@ -60,17 +60,18 @@
                 <td class="instructNum">5</td>
                     <td class="instructText">However every correct answer will grant you an additional 5 seconds to the timer</td>
                 </tr>
-            </table>
-            <!-- List created to help with quiz questions -->
+        </table>
+        <br>
+        <!-- List created to help with quiz questions -->
         <ul>
             <h2 id="quizQuestion">QUESTION?</h2>
-            <li id="quizQChoice1" class="questStyle">ANSWERS</li>
-            <li id="quizQChoice2" class="questStyle">ANSWERS</li>
-            <li id="quizQChoice3" class="questStyle">ANSWERS</li>
-            <li id="quizQChoice4" class="questStyle">ANSWERS</li>
+            <li type="radio" id="quizQChoice1" class="questStyle">ANSWERS</li>
+            <li type="radio" id="quizQChoice2" class="questStyle">ANSWERS</li>
+            <li type="radio" id="quizQChoice3" class="questStyle">ANSWERS</li>
+            <li type="radio" id="quizQChoice4" class="questStyle">ANSWERS</li>
     
         </ul>
-    </main>
+    </div>
 
         
     

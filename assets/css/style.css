@@ -73,6 +73,7 @@ header h1{
 
 /* Beginning of instruct classes for table of instructions */
 #quizInstruct{
+    
     padding: 5px 5px solid var(--tertiary);
     display: flex;
     align-items: flex-end;

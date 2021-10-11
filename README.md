@@ -1,8 +1,8 @@
 # urban-waffle 
-
+DOM Manipulation to create a quiz that is timed and saves users highscores
 
 ## Live URL
-
+https://plaindemon.github.io/urban-waffle/
 
 ## Repository Link
 https://github.com/Plaindemon/urban-waffle.git
