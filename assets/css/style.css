@@ -37,39 +37,39 @@ body {
     border-radius: 5px;
 
 }
-/*
+
 header h1{
      /* background-image: url("/urban-waffle/assets/images/ranCode.jpeg"); */
-    /* color:rgb(42, 6, 75); 
+     color:rgb(42, 6, 75); 
     border-bottom: 5px solid blueviolet;
     border-top: 5px solid blueviolet;
     border-right: 5px solid rgb(34, 3, 63);
     border-left: 5px solid rgb(42, 6, 75);
-} */
+} 
 
-/* body header h1 {
+body header h1 {
     border-bottom: 5px solid blueviolet;
     border-top: 5px solid blueviolet;
     border-right: 5px solid rgb(34, 3, 63);
     border-left: 5px solid rgb(42, 6, 75);
-    /* align-content: center; 
-} */
+    align-content: center; 
+} 
 
-/* header nav ul li {
+header nav ul li {
     border-bottom: 1px solid var(--primary);
     display: flex;
     align-content: center;
     flex-flow: row nowrap;
     justify-content: space-evenly;
-    /* align-items: flex-end; 
-} */
+     
+} 
 
-/* footer {
+footer {
     border-bottom: 5px solid blueviolet;
     border-top: 5px solid blueviolet;
     border-right: 5px solid rgb(34, 3, 63);
     border-left: 5px solid rgb(42, 6, 75);
-} */ 
+} 
 
 /* Beginning of instruct classes for table of instructions */
 #quizInstruct{
