@@ -1,26 +1,31 @@
-@font-face {
-    font-family: "WebPokeFont";
-    src: url("/urban-waffle/fonts/Pokemon-Hollow.ttf") format("ttf");
-}
-
 
 * {
     /* font-family: 'Times New Roman */
     font-family: 'Work Sans';
+    
+    
 }
 
 :root {
-    --primary: #ddff44;
-    --secondary: #8f5c5e;
-    --tertiary: rgb(233, 193, 169);
+    --primary: #4460ff;
+    --secondary: #76bfca;
+    --tertiary: rgb(189, 216, 201);
     --quaternary: #600484;
+    /* background-image: url("/urban-waffle/assets/images/ranCode.jpeg"); */
 }
 
+body {
+    border-bottom: 5px solid blueviolet;
+    border-top: 5px solid rgb(166, 165, 167);
+    border-right: 5px solid rgb(34, 3, 63);
+    border-left: 5px solid rgb(42, 6, 75);
+    padding: 25px;
+   
+}
 /* Start of header styling */
 
 header {
-    font-family: 'WebPokeFont';
-    background-image: url("assets/images/poke-logo.png");
+    
     background-color: var(--secondary);
     background-size: cover;
     border: 2px solid var(--primary);
@@ -28,7 +33,9 @@ header {
 
 }
 
-header img {
+header h1{
+     /* background-image: url("/urban-waffle/assets/images/ranCode.jpeg"); */
+    color:rgb(42, 6, 75); 
     border-bottom: 5px solid blueviolet;
     border-top: 5px solid blueviolet;
     border-right: 5px solid rgb(34, 3, 63);
@@ -50,6 +57,13 @@ header nav ul li {
     flex-flow: row nowrap;
     justify-content: space-evenly;
     /* align-items: flex-end; */
+}
+
+footer {
+    border-bottom: 5px solid blueviolet;
+    border-top: 5px solid blueviolet;
+    border-right: 5px solid rgb(34, 3, 63);
+    border-left: 5px solid rgb(42, 6, 75);
 }
 
 /* Beginning of instruct classes for table of instructions */
@@ -78,7 +92,12 @@ header nav ul li {
 /* End of instruct classes for table of instructions */
 
 
-/* Start of quizQuestion */
+/* Start of quiz question and answers section */
+
+/* .queststyle {
+    
+} */
+
 #quizQuestion{
     background-color: var(--tertiary);
     border: 2px solid var(--primary);
@@ -86,18 +105,37 @@ header nav ul li {
 
 }
 
-.quizQChoice{
+#quizQChoice1 {
     background-color: var(--primary);
     border: 2px solid var(--tertiary);
     border-radius: 5px;
 }
+
+#quizQChoice2 {
+    background-color: var(--primary);
+    border: 2px solid var(--tertiary);
+    border-radius: 5px;
+}
+
+#quizQChoice3 {
+    background-color: var(--primary);
+    border: 2px solid var(--tertiary);
+    border-radius: 5px;
+}
+
+#quizQChoice4 {
+    background-color: var(--primary);
+    border: 2px solid var(--tertiary);
+    border-radius: 5px;
+}
+
 /* end of quizQuestion */
 
 /* Start of quiz-head */
 
 #quiz-footer{
     background-color: var(--tertiary);
-    
+    text-align: center;
 }
 
 .clickbtn {
