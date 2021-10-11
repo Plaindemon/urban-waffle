@@ -2,7 +2,8 @@
 * {
     /* font-family: 'Times New Roman */
     font-family: 'Work Sans';
-    
+    margin: 0;
+    padding: 0;
     
 }
 
@@ -11,19 +12,19 @@
     --secondary: #76bfca;
     --tertiary: rgb(189, 216, 201);
     --quaternary: #600484;
-    background-image: url("/urban-waffle/assets/images/ranCode.jpeg");
+    /* background-image: url("/urban-waffle/assets/images/ranCode.jpeg"); */
 }
 #bodyStyle {
     border: 5px solid #600484;
 }
-/* body {
+body {
     border-bottom: 5px solid blueviolet;
     border-top: 5px solid rgb(166, 165, 167);
     border-right: 5px solid rgb(34, 3, 63);
     border-left: 5px solid rgb(42, 6, 75);
     padding: 25px;
    
-} */
+}
 
 
 /* Start of header styling */
@@ -142,6 +143,15 @@ header h1{
     padding: 20px;
     border: 1px solid var(--quaternary);
     border-radius: 5px;
+    /* commenting out this flex box content below */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+    
+}
+.clickbtn:hover {
+    background-color: var(--primary);
+    
     /* commenting out this flex box content below */
     /* display: flex;
     flex-direction: row;
