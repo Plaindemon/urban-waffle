@@ -53,7 +53,7 @@ document.querySelector('h2').innerHTML = 'CLICK START BUTTON TO BEGIN QUIZ AND S
 
 
 
-//add quiz questions
+//add quiz questions and connect quiz questions to pop up when the quiz is started
 
 
 
