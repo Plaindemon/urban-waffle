@@ -1,83 +1,15 @@
-//this javascript page is being used to house the questions for the quiz
-const quizQuestion = [
-    {
-        question: "What is Ash Ketchums first pokemon?",
-        a: "pikachu",
-        b: "bulbasaur",
-        c: "charmander",
-        d: "squirtle",
-        correct: "a",
-    },
-    {
-        question: "What type of pokemon is Pikachu?",
-        a: "thunder",
-        b: "lightning",
-        c: "electric",
-        d: "none of the above",
-        correct: "c",
-    },
-    {
-        question: "Which of the following is a bug type?",
-        a: "squirtle",
-        b: "gengar",
-        c: "beedrill",
-        d: "all of the above",
-        correct: "c",
+const body = document.body;
+const box = document.getElementById("#box");
+let ul = document.createElement("ul");
+// let li = document.createElement("li");
+ul.innerHTML = "<h2>QUESTION?</h2>" + "<br>" + "<li>ANSWERS</li>" + "<br>" + "<li>ANSWERS</li>" + "<br>" + "<li>ANSWERS</li>" + "<br>" + "<li>ANSWERS</li>";
 
-    },
-    {
-        question: "What is Ash Ketchums first pokemon?",
-        a: "pikachu",
-        b: "bulbasaur",
-        c: "charmander",
-        d: "squirtle",
-        correct: "a",
-    },
-    {
-        question: "What is Ash Ketchums first pokemon?",
-        a: "pikachu",
-        b: "bulbasaur",
-        c: "charmander",
-        d: "squirtle",
-        correct: "a",
-    },
-    {
-        question: "What is Ash Ketchums first pokemon?",
-        a: "pikachu",
-        b: "bulbasaur",
-        c: "charmander",
-        d: "squirtle",
-        correct: "a",
-    },
-    {
-        question: "What is Ash Ketchums first pokemon?",
-        a: "pikachu",
-        b: "bulbasaur",
-        c: "charmander",
-        d: "squirtle",
-        correct: "a",
-    },
-    {
-        question: "What is Ash Ketchums first pokemon?",
-        a: "pikachu",
-        b: "bulbasaur",
-        c: "charmander",
-        d: "squirtle",
-        correct: "a",
-    },
-    {
-        question: "What is Ash Ketchums first pokemon?",
-        a: "pikachu",
-        b: "bulbasaur",
-        c: "charmander",
-        d: "squirtle",
-        correct: "a",
-    },
-];
+// document.querySelector('ul').innerHTML = "<li>" + quizQuestions "</li>";
+// ul.innerText = "hello world";
+// ul.textContent = "hello world 2";
 
-
-
-
+body.append(ul);
+console.log(ul); // NodeList [<li>]
 // var quizQuestions = document.getElementById('quizQuestion').innerHTML = 'Quiz questions';
 
 // var quizAnswers1 = document.getElementById('quizQChoice1').innerHTML = 'Quiz answer choice 1';
@@ -87,4 +19,7 @@ const quizQuestion = [
 
 // quizQuestions.addEventListener('')
 
+// const ul = document.querySelector("ul");
 
+console.log(ul.textContent)
+console.log(ul.innerText)

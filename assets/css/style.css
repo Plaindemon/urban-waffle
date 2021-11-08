@@ -18,6 +18,7 @@
     border: 5px solid #600484;
 }
 body {
+    background-color: #60048441;
     border-bottom: 5px solid blueviolet;
     border-top: 5px solid rgb(166, 165, 167);
     border-right: 5px solid rgb(34, 3, 63);
@@ -26,6 +27,12 @@ body {
    
 }
 
+ul {
+    border: 5px solid #4460ff;
+    background-attachment: fixed;
+    list-style: none;
+    
+}
 
 /* Start of header styling */
 
@@ -65,10 +72,13 @@ header nav ul li {
 } 
 
 footer {
-    border-bottom: 5px solid blueviolet;
-    border-top: 5px solid blueviolet;
-    border-right: 5px solid rgb(34, 3, 63);
-    border-left: 5px solid rgb(42, 6, 75);
+    background-color: rgba(34, 3, 63, .2);
+    background-attachment: fixed;
+    background-size: cover;
+    /* border-top: 5px solid blueviolet;
+    border-right: 5px solid rgba(34, 3, 63, 1);
+    border-left: 5px solid rgba(42, 6, 75, 1); */
+    
 } 
 
 /* Beginning of instruct classes for table of instructions */

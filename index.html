@@ -15,40 +15,11 @@
         <h1>Multiple Choice Quiz & True/ False Quiz</h1> 
         
         <h2 id="countdownTimer"></h2>
-        <!-- class="timer" -->
-
-    </header>
-
-        <nav>
-            <br>
-            <!-- List created to help with quiz questions -->
-            <ul>
-                <h2 id="quizQuestion">QUESTION?</h2>
-                <li type="radio" id="quizQChoice1" name="questAnswer" class="questAnswer">ANSWERS</li>
-                <li type="radio" id="quizQChoice2" class="questAnswer">ANSWERS</li>
-                <li type="radio" id="quizQChoice3" class="questAnswer">ANSWERS</li>
-                <li type="radio" id="quizQChoice4" class="questAnswer">ANSWERS</li>
-        
-            </ul>
-            <br>
-            <table>
-                <!-- <tr><button id="restartBtn" class="clickbtn">Restart</button></tr> -->
-                <!-- <tr><button id="saveBtn" class="clickbtn">Save</button></tr> -->
-                <!-- <tr><button id="nextBtn" class="clickbtn">Next</button></tr> -->
-                <tr><button id="backBtn" class="clickbtn">Back</button></tr>
-                <tr><button id="startbtn" class="clickbtn">Start</button></tr>
-                <tr><button id="submitbtn" class="clickbtn">Submit</button></tr>
-            </table>
-        </nav>
-        <br>
-        <br>
-    
-    
-    <!-- Main starts here - fill with random question generated from a string of quiz questions -->
+        <!-- Main starts here - fill with random question generated from a string of quiz questions -->
     <div id="quizInstruct">
         <table>
-            <!-- Created a table to place the instructions and their styling in -->
-            <tr>
+                <!-- Created a table to place the instructions and their styling in -->
+                <tr>
                     <!-- Purposefully put the > in between the opening and closing tags instructNum & instructText-->
                     
                     <td class="instructNum">></td>
@@ -76,19 +47,37 @@
         </table>
        
     </div>
+        <br>
+            <table>
+                <!-- <tr><button id="restartBtn" class="clickbtn">Restart</button></tr> -->
+                <!-- <tr><button id="saveBtn" class="clickbtn">Save</button></tr> -->
+                <!-- <tr><button id="nextBtn" class="clickbtn">Next</button></tr> -->
+                <tr><button id="backBtn" class="clickbtn">Back</button></tr>
+                <tr><button id="startbtn" class="clickbtn">Start</button></tr>
+                <tr><button id="submitbtn" class="clickbtn">Submit</button></tr>
+            </table>
+        <!-- class="timer" -->
 
+    </header>
+        <div id="box">
+            <!-- List created to help with quiz questions -- THis is commented out because it is being generated into the page using DOM manipulation
+            <ul id="quiz">
+                <h2 id="quizQuestion">QUESTION?</h2>
+                <li>ANSWERS</li>
+                <li>ANSWERS</li>
+                <li>ANSWERS</li>
+                <li>ANSWERS</li>
         
+            </ul> -->
+        </div>
     
-    
-
-<br>
-<br>
-<!-- footer to be filled later with something about the quiz?  -->
-    <footer>
-         <p>Multiple Choice Quiz Game</p>
-         &copy;2021 by Plaindemon - Benjamin Chaplin       
-    </footer>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/questions.js"></script>
+
+    <!-- footer to be filled later with something about the quiz?  -->
+    <footer>
+        <p>Multiple Choice Quiz Game</p>
+        &copy;2021 by Plaindemon - Benjamin Chaplin       
+   </footer>
 </body>
 </html>

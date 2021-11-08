@@ -1,6 +1,82 @@
 //original script file
 var startTimer = document.getElementById('countdownTimer');
 
+//this javascript page is being used to house the questions for the quiz
+const quizQuestions = [
+    {
+        question: "What is Ash Ketchums first pokemon?",
+        a: "pikachu",
+        b: "bulbasaur",
+        c: "charmander",
+        d: "squirtle",
+        correct: "a",
+    },
+    {
+        question: "What type of pokemon is Pikachu?",
+        a: "thunder",
+        b: "lightning",
+        c: "electric",
+        d: "none of the above",
+        correct: "c",
+    },
+    {
+        question: "Which of the following is not a pokemon?",
+        a: "squirtle",
+        b: "gengar",
+        c: "lugio",
+        d: "all of the above",
+        correct: "c",
+
+    },
+    {
+        question: "What is Ash Ketchums first pokemon?",
+        a: "pikachu",
+        b: "bulbasaur",
+        c: "charmander",
+        d: "squirtle",
+        correct: "a",
+    },
+    {
+        question: "What is Ash Ketchums first pokemon?",
+        a: "pikachu",
+        b: "bulbasaur",
+        c: "charmander",
+        d: "squirtle",
+        correct: "a",
+    },
+    {
+        question: "What is Ash Ketchums first pokemon?",
+        a: "pikachu",
+        b: "bulbasaur",
+        c: "charmander",
+        d: "squirtle",
+        correct: "a",
+    },
+    {
+        question: "What is Ash Ketchums first pokemon?",
+        a: "pikachu",
+        b: "bulbasaur",
+        c: "charmander",
+        d: "squirtle",
+        correct: "a",
+    },
+    {
+        question: "What is Ash Ketchums first pokemon?",
+        a: "pikachu",
+        b: "bulbasaur",
+        c: "charmander",
+        d: "squirtle",
+        correct: "a",
+    },
+    {
+        question: "What is Ash Ketchums first pokemon?",
+        a: "pikachu",
+        b: "bulbasaur",
+        c: "charmander",
+        d: "squirtle",
+        correct: "a",
+    },
+];
 // used examples from the lesson 
 function countdown() {
     var timer = 100;
@@ -17,6 +93,7 @@ function countdown() {
         clearInterval(startCountdown);
     }
     }, 1000);
+    timeSetting();
 }
 
 console.log(countdown);
@@ -24,11 +101,6 @@ console.log(countdown);
 // //timer variable that is being used by the countdown variable to create a countdown time from 100 seconds
 // // const startTimer = document.querySelector("timer");
 // startTimer.addEventListener('click', function() {
-    
-
-    
-
-    
 // });
 
 // add click event that starts the quiz and then starts the timer
@@ -37,25 +109,31 @@ console.log(start)
 start.addEventListener('click', 
 countdown)
 
-
-
-
-
-
-
-
 //
 document.querySelector('h2').innerHTML = 'CLICK START BUTTON TO BEGIN QUIZ AND START THE TIMER';
 
-
-
-
-
-
-
 //add quiz questions
 
+var getQuestions = document.getElementById('#quizQuestion');
 
+var answers = document.getElementsByClassName('.questAnswer');
+var  quiz = document.getElement('ul');
+let quizQuestList = document.querySelector('li#quizQuestion');
+var quest = quizQuestions.length;
 
+questText ="<ul>";
+function questions() {
+    quiz.innerHTML = quest;
+    start.addEventListener('click', countdown);
 
+    for(let i = 0; i < questions; i++){
+        questText += "<li>" + questions.innerHTML + "</li>";
+    }
+    questText += "</ul>";
+    // console.log(startQuiz);
+
+}
+
+// questions();
+console.log(questions);
 
