@@ -77,6 +77,7 @@ const quizQuestions = [
         correct: "a",
     },
 ];
+quizQuestions
 // used examples from the lesson 
 function countdown() {
     var timer = 100;
@@ -114,22 +115,21 @@ document.querySelector('h2').innerHTML = 'CLICK START BUTTON TO BEGIN QUIZ AND S
 
 //add quiz questions
 
-var getQuestions = document.getElementById('#quizQuestion');
+// var getQuestions = document.getElementById('#quizQuestion');
 
-var answers = document.getElementsByClassName('.questAnswer');
-var  quiz = document.getElement('ul');
-let quizQuestList = document.querySelector('li#quizQuestion');
+// var answers = document.getElementsByClassName('.questAnswer');
+// var  quiz = document.getElement('ul');
+// let quizQuestList = document.querySelector('li#quizQuestion');
 var quest = quizQuestions.length;
-
-questText ="<ul>";
+console.log(quest)
 function questions() {
-    quiz.innerHTML = quest;
+    // when start button is clicked timer starts and then the quiz questions are cycled through
     start.addEventListener('click', countdown);
-
-    for(let i = 0; i < questions; i++){
-        questText += "<li>" + questions.innerHTML + "</li>";
+    for(let i = 0; i < quizQuestions.length; i++){
+        var placeholder = document.getElementById('placeholder');
+        console.log(placeholder);
     }
-    questText += "</ul>";
+    
     // console.log(startQuiz);
 
 }

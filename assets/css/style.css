@@ -14,15 +14,18 @@
     --quaternary: #600484;
     /* background-image: url("/urban-waffle/assets/images/ranCode.jpeg"); */
 }
-#bodyStyle {
+/* #bodyStyle {
     border: 5px solid #600484;
-}
+} */
 body {
+    background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/purple-and-blue-abstract-frank-tschakert.jpg');
     background-color: #60048441;
     border-bottom: 5px solid blueviolet;
     border-top: 5px solid rgb(166, 165, 167);
     border-right: 5px solid rgb(34, 3, 63);
     border-left: 5px solid rgb(42, 6, 75);
+    background-attachment: fixed;
+    background-size: cover;
     padding: 25px;
    
 }
@@ -49,7 +52,7 @@ header h1{
      /* background-image: url("/urban-waffle/assets/images/ranCode.jpeg"); */
      color:rgb(42, 6, 75); 
     border-bottom: 5px solid blueviolet;
-    border-top: 5px solid blueviolet;
+    border-top: 5px solid rgba(137, 43, 226, 0.493);
     border-right: 5px solid rgb(34, 3, 63);
     border-left: 5px solid rgb(42, 6, 75);
 } 
@@ -62,14 +65,14 @@ body header h1 {
     align-content: center; 
 } 
 
-header nav ul li {
+/* header nav ul li {
     border-bottom: 1px solid var(--primary);
     display: flex;
     align-content: center;
     flex-flow: row nowrap;
     justify-content: space-evenly;
      
-} 
+}  */
 
 footer {
     background-color: rgba(34, 3, 63, .2);
@@ -116,13 +119,14 @@ footer {
 
 
 
-#quizQChoice1 {
+.quizAnswerStyle {
     background-color: var(--primary);
     border: 2px solid var(--tertiary);
     border-radius: 5px;
+    /* display: grid; */
 }
 
-#quizQChoice2 {
+/* #quizQChoice2 {
     background-color: var(--primary);
     border: 2px solid var(--tertiary);
     border-radius: 5px;
@@ -138,7 +142,7 @@ footer {
     background-color: var(--primary);
     border: 2px solid var(--tertiary);
     border-radius: 5px;
-} 
+}  */
 
 /* end of quizQuestion */
 
