@@ -2,82 +2,82 @@
 var startTimer = document.getElementById('countdownTimer');
 
 //this javascript page is being used to house the questions for the quiz
-const quizQuestions = [
-    {
-        question: "What is Ash Ketchums first pokemon?",
-        a: "pikachu",
-        b: "bulbasaur",
-        c: "charmander",
-        d: "squirtle",
-        correct: "a",
-    },
-    {
-        question: "What type of pokemon is Pikachu?",
-        a: "thunder",
-        b: "lightning",
-        c: "electric",
-        d: "none of the above",
-        correct: "c",
-    },
-    {
-        question: "Which of the following is not a pokemon?",
-        a: "squirtle",
-        b: "gengar",
-        c: "lugio",
-        d: "all of the above",
-        correct: "c",
+// const quizQuestions = [
+//     {
+//         question: "What is Ash Ketchums first pokemon?",
+//         a: "pikachu",
+//         b: "bulbasaur",
+//         c: "charmander",
+//         d: "squirtle",
+//         correct: "a",
+//     },
+//     {
+//         question: "What type of pokemon is Pikachu?",
+//         a: "thunder",
+//         b: "lightning",
+//         c: "electric",
+//         d: "none of the above",
+//         correct: "c",
+//     },
+//     {
+//         question: "Which of the following is not a pokemon?",
+//         a: "squirtle",
+//         b: "gengar",
+//         c: "lugio",
+//         d: "all of the above",
+//         correct: "c",
 
-    },
-    {
-        question: "What is Ash Ketchums first pokemon?",
-        a: "pikachu",
-        b: "bulbasaur",
-        c: "charmander",
-        d: "squirtle",
-        correct: "a",
-    },
-    {
-        question: "What is Ash Ketchums first pokemon?",
-        a: "pikachu",
-        b: "bulbasaur",
-        c: "charmander",
-        d: "squirtle",
-        correct: "a",
-    },
-    {
-        question: "What is Ash Ketchums first pokemon?",
-        a: "pikachu",
-        b: "bulbasaur",
-        c: "charmander",
-        d: "squirtle",
-        correct: "a",
-    },
-    {
-        question: "What is Ash Ketchums first pokemon?",
-        a: "pikachu",
-        b: "bulbasaur",
-        c: "charmander",
-        d: "squirtle",
-        correct: "a",
-    },
-    {
-        question: "What is Ash Ketchums first pokemon?",
-        a: "pikachu",
-        b: "bulbasaur",
-        c: "charmander",
-        d: "squirtle",
-        correct: "a",
-    },
-    {
-        question: "What is Ash Ketchums first pokemon?",
-        a: "pikachu",
-        b: "bulbasaur",
-        c: "charmander",
-        d: "squirtle",
-        correct: "a",
-    },
-];
-quizQuestions
+//     },
+//     {
+//         question: "What is Ash Ketchums first pokemon?",
+//         a: "pikachu",
+//         b: "bulbasaur",
+//         c: "charmander",
+//         d: "squirtle",
+//         correct: "a",
+//     },
+//     {
+//         question: "What is Ash Ketchums first pokemon?",
+//         a: "pikachu",
+//         b: "bulbasaur",
+//         c: "charmander",
+//         d: "squirtle",
+//         correct: "a",
+//     },
+//     {
+//         question: "What is Ash Ketchums first pokemon?",
+//         a: "pikachu",
+//         b: "bulbasaur",
+//         c: "charmander",
+//         d: "squirtle",
+//         correct: "a",
+//     },
+//     {
+//         question: "What is Ash Ketchums first pokemon?",
+//         a: "pikachu",
+//         b: "bulbasaur",
+//         c: "charmander",
+//         d: "squirtle",
+//         correct: "a",
+//     },
+//     {
+//         question: "What is Ash Ketchums first pokemon?",
+//         a: "pikachu",
+//         b: "bulbasaur",
+//         c: "charmander",
+//         d: "squirtle",
+//         correct: "a",
+//     },
+//     {
+//         question: "What is Ash Ketchums first pokemon?",
+//         a: "pikachu",
+//         b: "bulbasaur",
+//         c: "charmander",
+//         d: "squirtle",
+//         correct: "a",
+//     },
+// ];
+
 // used examples from the lesson 
 function countdown() {
     var timer = 100;
@@ -120,16 +120,19 @@ document.querySelector('h2').innerHTML = 'CLICK START BUTTON TO BEGIN QUIZ AND S
 // var answers = document.getElementsByClassName('.questAnswer');
 // var  quiz = document.getElement('ul');
 // let quizQuestList = document.querySelector('li#quizQuestion');
-var quest = quizQuestions.length;
-console.log(quest)
+// var quest = quizQuestions.length;
+var quizInstruct = document.getElementById('#quizInstruct');
+// console.log(quest)
 function questions() {
     // when start button is clicked timer starts and then the quiz questions are cycled through
     start.addEventListener('click', countdown);
     for(let i = 0; i < quizQuestions.length; i++){
-        var placeholder = document.getElementById('placeholder');
+        var placeholder = document.querySelector('#quizInstruct');
         console.log(placeholder);
     }
-    
+    if (start){
+        quizInstruct.div.remove(quizInstruct);
+    }
     // console.log(startQuiz);
 
 }

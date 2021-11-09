@@ -9,10 +9,94 @@ const liC = document.createElement('li');
 const liD = document.createElement('li');
 const h2 = document.createElement('h2');
 
-// setting the attribute for each question
-h2.innerText = "QUESTION?";
+const quizQuestions = [
+    {
+        question: "What is Ash Ketchums first pokemon?",
+        a: "pikachu",
+        b: "bulbasaur",
+        c: "charmander",
+        d: "squirtle",
+        correct: "a",
+    },
+    {
+        question: "What type of pokemon is Pikachu?",
+        a: "thunder",
+        b: "lightning",
+        c: "electric",
+        d: "none of the above",
+        correct: "c",
+    },
+    {
+        question: "Which of the following is not a pokemon?",
+        a: "squirtle",
+        b: "gengar",
+        c: "lugio",
+        d: "all of the above",
+        correct: "c",
 
-liA.innerText = "Answer A" + "Selection";
+    },
+    {
+        question: "What is Ash Ketchums first pokemon?",
+        a: "pikachu",
+        b: "bulbasaur",
+        c: "charmander",
+        d: "squirtle",
+        correct: "a",
+    },
+    {
+        question: "What is Ash Ketchums first pokemon?",
+        a: "pikachu",
+        b: "bulbasaur",
+        c: "charmander",
+        d: "squirtle",
+        correct: "a",
+    },
+    {
+        question: "What is Ash Ketchums first pokemon?",
+        a: "pikachu",
+        b: "bulbasaur",
+        c: "charmander",
+        d: "squirtle",
+        correct: "a",
+    },
+    {
+        question: "What is Ash Ketchums first pokemon?",
+        a: "pikachu",
+        b: "bulbasaur",
+        c: "charmander",
+        d: "squirtle",
+        correct: "a",
+    },
+    {
+        question: "What is Ash Ketchums first pokemon?",
+        a: "pikachu",
+        b: "bulbasaur",
+        c: "charmander",
+        d: "squirtle",
+        correct: "a",
+    },
+    {
+        question: "What is Ash Ketchums first pokemon?",
+        a: "pikachu",
+        b: "bulbasaur",
+        c: "charmander",
+        d: "squirtle",
+        correct: "a",
+    },
+];
+// for (let i = 0; i < quizQuestions.valueOf(0).pop(0); i++) {
+
+//     //add the questions
+    
+
+//     console.log(quest[0])
+// }
+console.log(quizQuestions[0])
+let quest = "#" + quizQuestions[0];
+// setting the attribute for each question
+h2.innerText = quizQuestions[0];// "QUESTION?";
+console.log(quizQuestions.valueOf(0).pop(0))
+liA.innerText = "Answer A"+  + "Selection";
 liA.setAttribute("id", "A");
 
 liB.innerText = "Answer B" + "Selection";
