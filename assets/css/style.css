@@ -29,13 +29,23 @@ body {
     padding: 25px;
    
 }
+div {
+    padding: 25px;
+}
 
 ul {
     border: 5px solid #4460ff;
     background-attachment: fixed;
-    list-style: none;
+    list-style: none ;
+    /* list-style: none; */
     
 }
+ul li {
+    padding: 2px;
+    padding-left: 10px;
+    text-align: left;
+}
+
 
 /* Start of header styling */
 
@@ -75,9 +85,10 @@ body header h1 {
 }  */
 
 footer {
-    background-color: rgba(34, 3, 63, .2);
+    background-color: rgba(189, 216, 201, 0.5);
     background-attachment: fixed;
     background-size: cover;
+    padding: 50px;
     /* border-top: 5px solid blueviolet;
     border-right: 5px solid rgba(34, 3, 63, 1);
     border-left: 5px solid rgba(42, 6, 75, 1); */
@@ -90,6 +101,7 @@ footer {
     padding: 5px 5px solid var(--tertiary);
     display: flex;
     align-items: flex-end;
+    /* display: block; */
 }
 .instructNum {
     background-color: var(--secondary) ;
@@ -117,33 +129,6 @@ footer {
     
 } */
 
-
-
-.quizAnswerStyle {
-    background-color: var(--primary);
-    border: 2px solid var(--tertiary);
-    border-radius: 5px;
-    /* display: grid; */
-}
-
-/* #quizQChoice2 {
-    background-color: var(--primary);
-    border: 2px solid var(--tertiary);
-    border-radius: 5px;
-}
-
-#quizQChoice3 {
-    background-color: var(--primary);
-    border: 2px solid var(--tertiary);
-    border-radius: 5px;
-}
-
-#quizQChoice4 {
-    background-color: var(--primary);
-    border: 2px solid var(--tertiary);
-    border-radius: 5px;
-}  */
-
 /* end of quizQuestion */
 
 /* Start of quiz-head */
@@ -151,6 +136,14 @@ footer {
 #quiz-footer{
     background-color: var(--tertiary);
     text-align: center;
+}
+/*  */
+.boxHide {
+    display: none;
+}
+
+.boxShow {
+    display: block;
 }
 
 .clickbtn {
