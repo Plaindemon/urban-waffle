@@ -218,14 +218,18 @@ function questions() {
     // create function to remove the instructions when the quiz start button is clicked
     // variables for creating quiz structure to the page
     // const body = document.body;
-    
+    box.innerHTML ="";
     // box.classList.add("boxHide");
     let ul = document.createElement("ul");
     ul.classList.add("quizAnswerStyle");
-    const liA = document.createElement('li');
-    const liB = document.createElement('li');
-    const liC = document.createElement('li');
-    const liD = document.createElement('li');
+    const liA1 = document.createElement('li');
+    const liB1 = document.createElement('li');
+    const liC1 = document.createElement('li');
+    const liD1 = document.createElement('li');
+    const liA = document.createElement('button');
+    const liB = document.createElement('button');
+    const liC = document.createElement('button');
+    const liD = document.createElement('button');
     const h2 = document.createElement('h2');
 
     //add the questions
@@ -247,14 +251,22 @@ function questions() {
     // implementing those var and adding to page 
     ul.style.backgroundColor = "rgba(137, 43, 226, 0.75)";
     ul.appendChild(h2);
-    ul.appendChild(liA);
-    ul.appendChild(liB);
-    ul.appendChild(liC);
-    ul.appendChild(liD);
+    liA1.appendChild(liA);
+    liB1.appendChild(liB);
+    liC1.appendChild(liC);
+    liD1.appendChild(liD);
+    ul.appendChild(liA1);
+    ul.appendChild(liB1);
+    ul.appendChild(liC1);
+    ul.appendChild(liD1);
     console.log(ul); // NodeList [<li>]
     box.appendChild(ul);
+    
 
-
+    document.getElementById("A").addEventListener("click", checkAnswer)
+    document.getElementById("B").addEventListener("click", checkAnswer)
+    document.getElementById("C").addEventListener("click", checkAnswer)
+    document.getElementById("D").addEventListener("click", checkAnswer)
     console.log(ul.textContent)
     console.log(ul.innerText)
 
@@ -263,6 +275,16 @@ function questions() {
     
     
         // console.log(startQuiz);
+
+}
+
+function checkAnswer() {
+    var userAnswer = this.getAttribute("id");
+    console.log(userAnswer);
+    if(i < quizQuestions.length - 1) {
+        i++;
+        questions();
+    }
 
 }
 
