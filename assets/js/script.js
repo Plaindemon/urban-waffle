@@ -84,7 +84,7 @@ const quizQuestions = [
 
 // add click event that starts the quiz and then starts the timer
 var start = document.getElementById('startbtn');
-console.log(start)
+// console.log(start)
 start.addEventListener('click', 
 countdown)
 
@@ -93,7 +93,7 @@ function countdown() {
     box.style.display = "block";
     start.style.display = "none";
     timeSetting = setInterval(function(){
-        console.log(timer)
+        // console.log(timer)
         if(timer > 1){
         //
         startTimer.textContent = timer + ' seconds remain.';
@@ -107,32 +107,8 @@ function countdown() {
         }, 1000);
     questions();
 };
-console.log(countdown);
+// console.log(countdown);
 // var startCountdown = setInterval(countdown, 1000);
-
-
-// //timer variable that is being used by the countdown variable to create a countdown time from 100 seconds
-// const startTimer = document.querySelector("timer");
-
-
-
-
-
-
-
-
-// var quizInstruct = document.getElementById('quizInstruct');
-// // if () {
-// //     quizInstruct.classList.remove('boxShow');
-// //     console.log(quizInstruct)
-// //     quizInstruct.classList.change('boxHide');
-    
-// // }
-// //
-// console.log(quizInstruct)
-// document.querySelector('h2').innerHTML = 'CLICK START BUTTON TO BEGIN QUIZ AND START THE TIMER';
-
-
 
 // console.log(quest)
 
@@ -186,7 +162,7 @@ function questions() {
     ul.appendChild(liB1);
     ul.appendChild(liC1);
     ul.appendChild(liD1);
-    console.log(ul); // NodeList [<li>]
+    // console.log(ul); // NodeList [<li>]
     box.appendChild(ul);
     
 
@@ -194,8 +170,8 @@ function questions() {
     document.getElementById("B").addEventListener("click", checkAnswer)
     document.getElementById("C").addEventListener("click", checkAnswer)
     document.getElementById("D").addEventListener("click", checkAnswer)
-    console.log(ul.textContent)
-    console.log(ul.innerText)
+    // console.log(ul.textContent)
+    // console.log(ul.innerText)
 
     // when start button is clicked timer starts and then the quiz questions are cycled through
     
@@ -207,11 +183,14 @@ function questions() {
 
 function checkAnswer() {
     var userAnswer = this.getAttribute("id");
-    console.log(userAnswer);
+    // console.log(userAnswer);
     if(userAnswer === quizQuestions[i].correct){
-        score += 10;
-    }else{
+        score += 5;
+        timer += 5;
+    }
+    else{
         timer -= 5;
+        score -= 5;
     }
     if(i < quizQuestions.length - 1) {
         i++;
@@ -223,19 +202,58 @@ function checkAnswer() {
 
 }
 
+const userInitials = document.createElement('input');
+
 function displayScore() {
     box.innerHTML = "";
     const h3 = document.createElement('h3');
-    const userInitials = document.createElement('input');
+    const initialsSubmit = document.createElement('button');
+    initialsSubmit.setAttribute("id", "submitButton");
+    initialsSubmit.setAttribute("placeholder", "submitScore");
     userInitials.setAttribute("id", "initials");
+    userInitials.setAttribute("type", "text");
     userInitials.setAttribute("placeholder", "Enter user initials");
     const saveUser = document.createElement('button');
     saveUser.setAttribute("id", "scoreSave");
     userInitials.textContent = "saveUser";
     
-    h3.innerText = "Score: "+(score+timer)
+
+    h3.innerText = "Score: " + (score)
     box.appendChild(h3)
     box.appendChild(userInitials)
+    box.appendChild(initialsSubmit)
+    document.getElementById('submitButton').
+    addEventListener('click', submitScore)
+    initialsSubmit.textContent = "Submit Initials";
     
-    
+
 }
+displayScore();
+// add event handler for the submit button, inside the submit is where you get the local storage -- see comments below
+var highScores = [];
+// create function to get the submission from local storage
+function submitScore(){
+    // get the local storage
+    var getLocal = JSON.parse(localStorage.getItem("highScores"));
+    // gets the value of the initials from the input field - initials
+    var initials = document.getElementById("initials").value;
+    // puts current user initials into highscore array 
+    var current = {"initials": initials, "score": score};
+    // pushes highscores
+    highScores.push(getLocal);
+    console.log(highScores)
+    //pushed back up to local storage
+    highScores.push(current)
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+}
+// highScores[0].initials
+
+// local storage set // high scores and then the information // set as var then get the high scores -- add new information and new initials to page then set it and push it back up to the setter
+// display highscores in HTML after the new score is submitted
+function highScoresDisplay() {
+    for (let i = 0; i < highScores.length; i++) {
+    h3.innerText = "High Scores List" + highScores[i];
+    }
+ 
+}
+highScoresDisplay();
