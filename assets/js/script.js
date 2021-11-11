@@ -5,7 +5,7 @@ box.style.display = "none";
 var timer = 100;
 var timeSetting;
 var i = 0;
-  
+var score = 0;
 const quizQuestions = [
     {
         question: "What is Ash Ketchums first pokemon?",
@@ -13,7 +13,7 @@ const quizQuestions = [
         b: "bulbasaur",
         c: "charmander",
         d: "squirtle",
-        correct: "a",
+        correct: "A",
     },
     {
         question: "What type of pokemon is Pikachu?",
@@ -21,7 +21,7 @@ const quizQuestions = [
         b: "lightning",
         c: "electric",
         d: "none of the above",
-        correct: "c",
+        correct: "C",
     },
     {
         question: "Which of the following is not a pokemon?",
@@ -29,7 +29,7 @@ const quizQuestions = [
         b: "gengar",
         c: "lugio",
         d: "all of the above",
-        correct: "c",
+        correct: "C",
 
     },
     {
@@ -38,7 +38,7 @@ const quizQuestions = [
         b: "bulbasaur",
         c: "charmander",
         d: "squirtle",
-        correct: "a",
+        correct: "A",
     },
     {
         question: "What is Ash Ketchums first pokemon?",
@@ -46,7 +46,7 @@ const quizQuestions = [
         b: "bulbasaur",
         c: "charmander",
         d: "squirtle",
-        correct: "a",
+        correct: "A",
     },
     {
         question: "What is Ash Ketchums first pokemon?",
@@ -54,7 +54,7 @@ const quizQuestions = [
         b: "bulbasaur",
         c: "charmander",
         d: "squirtle",
-        correct: "a",
+        correct: "A",
     },
     {
         question: "What is Ash Ketchums first pokemon?",
@@ -62,7 +62,7 @@ const quizQuestions = [
         b: "bulbasaur",
         c: "charmander",
         d: "squirtle",
-        correct: "a",
+        correct: "A",
     },
     {
         question: "What is Ash Ketchums first pokemon?",
@@ -70,7 +70,7 @@ const quizQuestions = [
         b: "bulbasaur",
         c: "charmander",
         d: "squirtle",
-        correct: "a",
+        correct: "A",
     },
     {
         question: "What is Ash Ketchums first pokemon?",
@@ -78,89 +78,20 @@ const quizQuestions = [
         b: "bulbasaur",
         c: "charmander",
         d: "squirtle",
-        correct: "a",
+        correct: "A",
     },
 ];
-//this javascript page is being used to house the questions for the quiz
-// const quizQuestions = [
-//     {
-//         question: "What is Ash Ketchums first pokemon?",
-//         a: "pikachu",
-//         b: "bulbasaur",
-//         c: "charmander",
-//         d: "squirtle",
-//         correct: "a",
-//     },
-//     {
-//         question: "What type of pokemon is Pikachu?",
-//         a: "thunder",
-//         b: "lightning",
-//         c: "electric",
-//         d: "none of the above",
-//         correct: "c",
-//     },
-//     {
-//         question: "Which of the following is not a pokemon?",
-//         a: "squirtle",
-//         b: "gengar",
-//         c: "lugio",
-//         d: "all of the above",
-//         correct: "c",
 
-//     },
-//     {
-//         question: "What is Ash Ketchums first pokemon?",
-//         a: "pikachu",
-//         b: "bulbasaur",
-//         c: "charmander",
-//         d: "squirtle",
-//         correct: "a",
-//     },
-//     {
-//         question: "What is Ash Ketchums first pokemon?",
-//         a: "pikachu",
-//         b: "bulbasaur",
-//         c: "charmander",
-//         d: "squirtle",
-//         correct: "a",
-//     },
-//     {
-//         question: "What is Ash Ketchums first pokemon?",
-//         a: "pikachu",
-//         b: "bulbasaur",
-//         c: "charmander",
-//         d: "squirtle",
-//         correct: "a",
-//     },
-//     {
-//         question: "What is Ash Ketchums first pokemon?",
-//         a: "pikachu",
-//         b: "bulbasaur",
-//         c: "charmander",
-//         d: "squirtle",
-//         correct: "a",
-//     },
-//     {
-//         question: "What is Ash Ketchums first pokemon?",
-//         a: "pikachu",
-//         b: "bulbasaur",
-//         c: "charmander",
-//         d: "squirtle",
-//         correct: "a",
-//     },
-//     {
-//         question: "What is Ash Ketchums first pokemon?",
-//         a: "pikachu",
-//         b: "bulbasaur",
-//         c: "charmander",
-//         d: "squirtle",
-//         correct: "a",
-//     },
-// ];
+// add click event that starts the quiz and then starts the timer
+var start = document.getElementById('startbtn');
+console.log(start)
+start.addEventListener('click', 
+countdown)
 
 // used examples from the lesson 
 function countdown() {
     box.style.display = "block";
+    start.style.display = "none";
     timeSetting = setInterval(function(){
         console.log(timer)
         if(timer > 1){
@@ -168,9 +99,10 @@ function countdown() {
         startTimer.textContent = timer + ' seconds remain.';
         timer--;
         }
-        else if(timer === 0){
+        else{
         console.log("Quiz Time is up");
-        clearInterval(startCountdown);
+        clearInterval(timeSetting);
+        displayScore();
         }
         }, 1000);
     questions();
@@ -185,11 +117,6 @@ console.log(countdown);
 
 
 
-// add click event that starts the quiz and then starts the timer
-var start = document.getElementById('startbtn');
-console.log(start)
-start.addEventListener('click', 
-countdown)
 
 
 
@@ -281,14 +208,34 @@ function questions() {
 function checkAnswer() {
     var userAnswer = this.getAttribute("id");
     console.log(userAnswer);
+    if(userAnswer === quizQuestions[i].correct){
+        score += 10;
+    }else{
+        timer -= 5;
+    }
     if(i < quizQuestions.length - 1) {
         i++;
         questions();
+    }else{
+        clearInterval(timeSetting);
+        displayScore();
     }
 
 }
 
-// document.querySelector('div #box').innerHTML = "<li>" + quizQuestions "</li>";
-
-
-// document.querySelector('ul').innerHTML = ";
+function displayScore() {
+    box.innerHTML = "";
+    const h3 = document.createElement('h3');
+    const userInitials = document.createElement('input');
+    userInitials.setAttribute("id", "initials");
+    userInitials.setAttribute("placeholder", "Enter user initials");
+    const saveUser = document.createElement('button');
+    saveUser.setAttribute("id", "scoreSave");
+    userInitials.textContent = "saveUser";
+    
+    h3.innerText = "Score: "+(score+timer)
+    box.appendChild(h3)
+    box.appendChild(userInitials)
+    
+    
+}
